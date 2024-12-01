@@ -1,0 +1,12 @@
+RewriteEngine on
+# Mapping des URLs
+RewriteRule ^api/v1.0/produit/list/?$ api/lire.php [L]
+RewriteRule ^api/v1.0/produit/new/?$ api/creer.php [L]
+RewriteRule ^api/v1.0/produit/update/?$ api/modifier.php [L]
+RewriteRule ^api/v1.0/produit/update/([0-9]+)/?$ api/modifier.php?id=$1 [L] 
+RewriteRule ^api/v1.0/produit/delete/?$ api/supprimer.php [L]
+RewriteRule ^api/v1.0/produit/delete/([0-9]+)/?$ api/supprimer.php?id=$1 [L]
+RewriteRule ^api/v1.0/produit/listone/?$ api/lire_un.php [L]
+RewriteRule ^api/v1.0/produit/listone/([0-9]+)/?$ api/lire_un.php?id=$1 [L]
+Header set Access-Control-Allow-Origin *
+
